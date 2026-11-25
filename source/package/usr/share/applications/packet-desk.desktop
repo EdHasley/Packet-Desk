@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Packet Desk
+Comment=Kantronics packet radio serial terminal
+Exec=packet-desk
+Icon=utilities-terminal
+Terminal=false
+Categories=Network;HamRadio;

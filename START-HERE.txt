@@ -1,0 +1,33 @@
+Packet Desk 0.3.0
+
+Install on a Debian-based Linux desktop or Raspberry Pi OS with a
+graphical session. From the extracted Packet-Desk-0.3.0 folder, run
+
+    sudo apt install ./packet-desk_0.3.0_all.deb
+
+Open Packet Desk from the menu or run packet-desk. APT resolves python3,
+python3-tk and python3-serial from your configured distribution repositories.
+The app uses a serial port and a Kantronics TNC in TERMINAL mode.
+
+Start with the command guide under
+source/package/usr/share/doc/packet-desk/. KPC-9612-example.txt contains
+a two-command query batch and commented configuration examples.
+
+Rebuild the installer
+
+    ./source/build.sh
+
+The build uses dpkg-deb and the package tree in source/package. The
+included Python, launchers, help data, and desktop entry are all the
+application files. Build output is written to source/dist.
+
+Run regression checks from the extracted folder with a graphical session:
+
+    /usr/bin/python3 tests/test_release_030.py
+    /usr/bin/python3 tests/test_profiles_batch_appearance.py
+    /usr/bin/python3 tests/test_context_menu.py
+
+These checks use emulated serial ports. The mouse test needs X11 and
+libxtst6 with a window manager that supports minimizing windows. It opens
+test windows and moves the pointer. You can run the tests inside a virtual
+X11 session with a window manager for isolation.

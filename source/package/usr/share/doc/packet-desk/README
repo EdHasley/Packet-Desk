@@ -1,0 +1,90 @@
+Packet Desk 0.3.0
+
+Install on Debian, Linux Mint Debian Edition, or Raspberry Pi OS with a
+graphical desktop:
+
+    sudo apt install ./packet-desk_0.3.0_all.deb
+
+Open Packet Desk from the application menu or run packet-desk. The same
+package uses native Python/Tk and pySerial on Intel/AMD and ARM. For a Pi
+running Raspberry Pi OS Lite, a graphical desktop session is needed.
+
+1. Attach the TNC via its computer USB port or a compatible USB-to-RS-232
+   adapter and cable. A Pi GPIO UART uses TTL levels and must not be
+   connected directly to a true RS-232 port.
+2. Select the port. A path under /dev/serial/by-id is useful when available.
+   Set the baud and flow control to match the TNC's computer serial port.
+   The serial format is 8N1. The app starts at 9600 baud with XON/XOFF.
+3. Open the port. The app sends no bytes automatically. For a TNC in
+   TERMINAL mode, click Cmd to send the factory command character Ctrl+C.
+   If your TNC uses a different command character or is in HOST, KISS,
+   transparent mode, or autobaud setup, use its manual to get to cmd:.
+4. Confirm cmd: before using Connect, Disconnect, Monitor or Converse.
+   Set MYCALL to your licensed callsign in the command console if needed.
+   Connect accepts a destination callsign and optional digipeaters.
+   In CONVERS mode, the input field sends packet text when you press Enter.
+   Return to cmd: before using command shortcuts. Monitor displays the
+   text the TNC sends in accordance with its own monitor settings.
+5. Start log appends the displayed transcript from that point forward.
+6. TNC command help includes searchable indexes for the KPC-3 Plus,
+   KPC-9612 Plus and KAM XL. Use List firmware commands to see what your
+   connected TNC supports. The printable help file is TNC-Commands.txt
+   in this directory.
+
+Use New TNC tab to open another physical serial port. Built-in COM ports
+commonly appear as /dev/ttyS0 and /dev/ttyS1. You can type a path manually.
+
+TNC profiles
+- Use Rename TNC to name the current tab. Use Profiles > Save current TNC
+  to keep that name, serial port, baud, flow control, destination and path.
+  Renaming a saved TNC also renames its profile.
+- Select a saved profile to open it in a new tab. Open port when ready.
+- Profiles and appearance are kept in your Packet Desk configuration folder.
+  Profiles capture the computer-side settings. Save a DISPLAY transcript
+  separately if you need a record of the TNC firmware settings.
+
+Command files
+- Open Command file for the selected TNC. Open or create a UTF-8 text file
+  and enter one printable ASCII command per line. Blank and # comment lines
+  are skipped. Use Save to keep a reusable copy.
+- Delete selection and Clear editor are in the Edit menu and the right-click
+  menu. Ctrl+Z undoes either action. Save writes the current editor buffer.
+- Use Batch > Check syntax to find stray prompts, status lines and common
+  DISPLAY annotations before any command is sent. Batch > Command file syntax
+  shows examples for Kantronics firmware 8.2.
+- At cmd:, click Send command file. Packet Desk waits for cmd: after each line
+  and normally stops on a TNC rejection or a 10-second prompt timeout.
+  Batch > Continue after rejected lines waits for cmd: and then sends the
+  next command after a rejection. The transcript lists rejected lines.
+  Stop sending cancels the unsent lines. Commands already sent may have
+  taken effect. Use this for configuration, and issue commands that start
+  a connection or switch modes separately.
+- Start with harmless queries such as VERSION and MYCALL if you want to test
+  a batch before changing settings.
+
+Appearance
+Use Appearance to select System, Light, Dark, Warm dark or Custom. Customize
+colors lets you start from a preset and set each color using a picker or hex
+value. Shaded tabs adds raised, shaded tabs to any palette. Both settings
+are remembered the next time Packet Desk opens.
+Dark uses charcoal panels, pale green text and an active red tab, following
+the XLX480 dashboard's color scheme.
+
+Clipboard: Select transcript text and press Ctrl+C, or right-click for
+Copy entire transcript. Ctrl+A selects all. In the input field, Ctrl+V
+pastes without sending. Send or Enter transmits what is in the field.
+Use the Cmd button to send Ctrl+C to the TNC itself.
+
+If the serial device is owned by group dialout and you get Permission
+denied, add your desktop user to that group and log out and back in:
+
+    sudo usermod -aG dialout "$USER"
+
+Each tab provides a terminal session for a separate serial port. This release
+implements neither Kantronics
+binary HOST mode nor KISS or the original KaGOLD multi-session UI. The
+old application and its data are not required for this package. This is
+a new program, independent of InterFlex Systems Design and Kantronics.
+
+Kantronics KPC-3 Plus manual:
+https://kantronics.com/wp-content/uploads/2018/10/KPC-3Plus-Manual-RevH.pdf

@@ -1,0 +1,615 @@
+Packet Desk • Kantronics TNC Command Help
+
+At cmd: type HELP for every command on the connected firmware.
+Type HELP followed by a command name for its built-in description.
+Type HELP C* for commands beginning with C.
+Type VERSION to see your firmware revision.
+
+These offline indexes point to the Terminal Command Reference in each
+manual. Commands inside a mailbox or node use the help at that prompt.
+
+KPC-3 Plus
+https://kantronics.com/wp-content/uploads/2018/10/KPC-3Plus-Manual-RevH.pdf
+
+8BITCONV      p. 151
+ABAUD         p. 151  Computer-side serial speed. A change may require a reset and a matching speed in Packet Desk.
+ANALOG        p. 151
+AUTOLF        p. 153
+AX25L2V2      p. 153
+AXDELAY       p. 154
+AXHANG        p. 154
+BEACON        p. 154  Controls automatic packet beacon timing on firmware with this command.
+BKONDEL       p. 154
+BLT           p. 155
+BREAK         p. 155
+BTEXT         p. 155  Sets the text that goes into beacon packets.
+BUDLIST       p. 156
+CALIBRAT      p. 156
+CANLINE       p. 156
+CANPAC        p. 157
+CD            p. 157
+CHECK         p. 158
+CMDTIME       p. 158
+CMSG          p. 158
+COMMAND       p. 159  Sets the character that returns the TNC to command mode. Factory default is Ctrl+C.
+CONLIST       p. 159
+CONMODE       p. 159
+CONNECT       p. 160  Requests a packet link to a callsign. Add VIA and comma-separated callsigns for a digipeater path.
+CONOK         p. 160
+CONPERM       p. 161
+CONVERS       p. 161  Treats keyboard input as packet text. Ctrl+C returns to the command prompt with factory settings.
+CPACTIME      p. 161
+CR            p. 162
+CRSUP         p. 162
+CSTAMP        p. 162
+CTEXT         p. 162
+CTRL          p. 163
+CWID          p. 163
+CWIDTEXT      p. 163
+DAMA          p. 164
+DAMACHCK      p. 164
+DAYSTR        p. 164
+DAYTIME       p. 165
+DAYTWEAK      p. 165
+DBLDISC       p. 166
+DELETE        p. 166
+DIGIPEAT      p. 166
+DISCONNE      p. 167  Ends the AX.25 link on the current TNC stream.
+DISPLAY       p. 167  Shows the TNC's current settings. Some firmware accepts a group selector.
+DWAIT         p. 168
+ECHO          p. 168
+ESCAPE        p. 168
+FILTER        p. 169
+FLOW          p. 169
+FRACK         p. 169  Sets the wait before an unacknowledged frame is retried.
+FULLDUP       p. 170
+GPSHEAD       p. 170
+GPSINIT       p. 170
+GPSPORT       p. 171
+GPSTIME       p. 171
+HBAUD         p. 172  Sets the over-the-air modem rate. The computer-side speed is controlled by ABAUD.
+HEADERLN      p. 172
+HELP          p. 172  Lists the available firmware commands. HELP followed by a name gives a short explanation.
+HID           p. 172
+HTEXT         p. 173
+ID            p. 173
+INTFACE       p. 173  Selects the computer interface mode. Packet Desk uses TERMINAL mode.
+K             p. 174
+KNTIMER       p. 175
+LCOK          p. 175
+LEDS          p. 175
+LFADD         p. 175
+LFSUP         p. 175
+LGETCHAR      p. 175
+LLIST         p. 176
+LT            p. 176
+LTP           p. 177
+LTRACK        p. 177
+MALL          p. 177
+MAXFRAME      p. 177  Limits the number of outstanding packets before acknowledgment.
+MAXUSERS      p. 178
+MBEACON       p. 178
+MCOM          p. 178
+MCON          p. 179  Controls monitoring while connected.
+MHEADER       p. 180
+MHEARD        p. 179  Displays the stations heard by the TNC.
+MONITOR       p. 180  Turns packet monitoring on or off. Other monitor settings control which packets appear.
+MRESP         p. 180
+MRPT          p. 181
+MSTAMP        p. 181
+MXMIT         p. 182
+MYALIAS       p. 182
+MYCALL        p. 182  Displays or sets your station callsign and optional SSID.
+MYDGPS        p. 182
+MYDROP        p. 183
+MYNODE        p. 183
+MYPBBS        p. 183
+MYREMOTE      p. 183
+NDHEARD       p. 184
+NDWILD        p. 184
+NETALIAS      p. 184
+NETBUFFS      p. 185
+NETCALL       p. 185
+NETCIRCS      p. 185
+NETDESTS      p. 185
+NETLINKS      p. 186
+NETROUTE      p. 186
+NETUSERS      p. 186
+NEWMODE       p. 187
+NOMODE        p. 187
+NTEXT         p. 187
+NUMNODES      p. 187
+PACLEN        p. 188  Controls the size of the packet data portion.
+PACTIME       p. 188
+PASS          p. 188
+PASSALL       p. 189
+PBBS          p. 189
+PBFORWRD      p. 189
+PBHEADER      p. 190
+PBHOLD        p. 190
+PBKILLFW      p. 190
+PBLIST        p. 190
+PBLO          p. 191
+PBMAIL        p. 192
+PBPERSON      p. 192
+PBREVERS      p. 192
+PBSIZE        p. 192
+PERSIST       p. 193
+PHEARD        p. 193
+PID           p. 194
+PMODE         p. 194
+PTEXT         p. 194
+RANGE         p. 194
+REDISPLA      p. 195
+RELINK        p. 195
+RESET         p. 195  Restarts the TNC. This can drop active connections and apply pending interface changes.
+RESTORE       p. 196  Restores factory settings. Consult the manual before using it.
+RETRY         p. 196  Sets the retry limit for packet connections.
+RING          p. 196
+RNRTIME       p. 196
+RPRINT        p. 196
+RTEXT         p. 197
+SCREENL       p. 198
+SENDPAC       p. 198
+SLOTTIME      p. 198
+START         p. 198
+STATUS        p. 198  Reports connection state on the TNC.
+STOP          p. 199
+STREAMCA      p. 199
+STREAMEV      p. 200
+STREAMSW      p. 200  Sets the character that introduces a stream selector in terminal mode.
+SUPLIST       p. 200
+SWP           p. 201
+TELEMETRY     p. 201
+TRACE         p. 202
+TRANS         p. 202
+TRFLOW        p. 203
+TRIES         p. 203
+TXDELAY       p. 203  Sets the interval between keying the transmitter and sending packet data.
+TXFLOW        p. 204
+UIDIGI        p. 204
+UIDUPE        p. 204
+UIDWAIT       p. 204
+UIFLOOD       p. 205
+UITRACE       p. 205
+UNPROTO       p. 205  Sets the destination and optional path for unconnected packet transmissions.
+USERS         p. 206
+VERSION       p. 206  Reports firmware version information.
+WEFAX         p. 206
+XFLOW         p. 207  Controls software flow control on the serial interface.
+XKCHKSUM      p. 207
+XKPOLLED      p. 207
+XMITLVL       p. 207
+XMITOK        p. 208
+XOFF          p. 208
+XON           p. 208
+
+KPC-9612 Plus
+https://kantronics.com/wp-content/uploads/2018/10/KPC-9612Plus-Manual-RevG.pdf
+
+8BITCONV      p. 174
+ABAUD         p. 174  Computer-side serial speed. A change may require a reset and a matching speed in Packet Desk.
+ANALOG        p. 175
+AUTOLF        p. 176
+AX25L2V2      p. 176
+AXDELAY       p. 176
+AXHANG        p. 177
+BEACON        p. 177  Controls automatic packet beacon timing on firmware with this command.
+BKONDEL       p. 177
+BLT           p. 178
+BP96          p. 178
+BREAK         p. 178
+BTEXT         p. 179  Sets the text that goes into beacon packets.
+BUDLIST       p. 179
+CALIBRAT      p. 179
+CANLINE       p. 180
+CANPAC        p. 180
+CD            p. 180
+CHECK         p. 181
+CMDTIME       p. 181
+CMSG          p. 182
+COMMAND       p. 182  Sets the character that returns the TNC to command mode. Factory default is Ctrl+C.
+CONLIST       p. 182
+CONMODE       p. 183
+CONNECT       p. 183  Requests a packet link to a callsign. Add VIA and comma-separated callsigns for a digipeater path.
+CONOK         p. 184
+CONPERM       p. 184
+CONVERS       p. 185  Treats keyboard input as packet text. Ctrl+C returns to the command prompt with factory settings.
+CPACTIME      p. 185
+CR            p. 185
+CRSUP         p. 185
+CSTAMP        p. 186
+CTEXT         p. 186
+CTRL          p. 186
+CWID          p. 187
+CWIDTEXT      p. 187
+DAMA          p. 187
+DAMACHCK      p. 187
+DAYSTR        p. 188
+DAYTIME       p. 188
+DAYTWEAK      p. 189
+DBLDISC       p. 189
+DELETE        p. 190
+DIGIPEAT      p. 190
+DISCONNE      p. 190  Ends the AX.25 link on the current TNC stream.
+DISPLAY       p. 191  Shows the TNC's current settings. Some firmware accepts a group selector.
+DWAIT         p. 191
+ECHO          p. 192
+EQUALIZE      p. 192
+ESCAPE        p. 193
+FILTER        p. 193
+FLOW          p. 193
+FRACK         p. 194  Sets the wait before an unacknowledged frame is retried.
+FULLDUP       p. 194
+GPSHEAD       p. 194
+GPSINIT       p. 195
+GPSTIME       p. 195
+HBAUD         p. 195  Sets the over-the-air modem rate. The computer-side speed is controlled by ABAUD.
+HEADERLN      p. 196
+HELP          p. 196  Lists the available firmware commands. HELP followed by a name gives a short explanation.
+HID           p. 196
+HTEXT         p. 197
+ID            p. 197
+INTFACE       p. 197  Selects the computer interface mode. Packet Desk uses TERMINAL mode.
+K             p. 198
+KNTIMER       p. 198
+LCOK          p. 199
+LFADD         p. 199
+LFSUP         p. 199
+LLIST         p. 199
+LT            p. 200
+LTP           p. 200
+LTRACK        p. 200
+MALL          p. 201
+MAXFRAME      p. 201  Limits the number of outstanding packets before acknowledgment.
+MAXUSERS      p. 201
+MBEACON       p. 202
+MCOM          p. 202
+MCON          p. 203  Controls monitoring while connected.
+MHEADER       p. 203
+MHEARD        p. 203  Displays the stations heard by the TNC.
+MONITOR       p. 204  Turns packet monitoring on or off. Other monitor settings control which packets appear.
+MRESP         p. 204
+MRPT          p. 205
+MSTAMP        p. 205
+MXMIT         p. 205
+MYALIAS       p. 206
+MYCALL        p. 206  Displays or sets your station callsign and optional SSID.
+MYDGPS        p. 206
+MYDROP        p. 207
+MYGATE        p. 207
+MYNODE        p. 207
+MYPAGE        p. 207
+MYPBBS        p. 208
+MYREMOTE      p. 208
+NDHEARD       p. 208
+NDWILD        p. 209
+NETALIAS      p. 209
+NETBUFFS      p. 209
+NETCALL       p. 209
+NETCIRCS      p. 210
+NETDESTS      p. 210
+NETLINKS      p. 210
+NETROUTE      p. 211
+NETUSERS      p. 211
+NEWMODE       p. 211
+NOMODE        p. 211
+NTEXT         p. 212
+NUMNODES      p. 212
+ONERADIO      p. 212
+PACLEN        p. 213  Controls the size of the packet data portion.
+PACTIME       p. 213
+PAGE          p. 213
+PAGECWID      p. 214
+PAGEDIR       p. 214
+PAGELOG       p. 214
+PAGEMON       p. 215
+PAGEPRIV      p. 215
+PAGEPSWD      p. 216
+PAGETEXT      p. 216
+PAGEXINV      p. 216
+PASS          p. 216
+PASSALL       p. 217
+PBBS          p. 217
+PBFORWRD      p. 217
+PBHEADER      p. 218
+PBHOLD        p. 218
+PBKILLFW      p. 218
+PBLIST        p. 219
+PBLO          p. 220
+PBPERSON      p. 220
+PBREVERS      p. 220
+PERSIST       p. 220
+PHEARD        p. 221
+PID           p. 221
+PMODE         p. 222
+PORT          p. 222
+PTEXT         p. 222
+RANGE         p. 222
+REDISPLA      p. 223
+RELINK        p. 223
+RESET         p. 223  Restarts the TNC. This can drop active connections and apply pending interface changes.
+RESTORE       p. 224  Restores factory settings. Consult the manual before using it.
+RETRY         p. 224  Sets the retry limit for packet connections.
+RING          p. 224
+RNRTIME       p. 224
+RPRINT        p. 225
+RTEXT         p. 225
+SCREENL       p. 226
+SENDPAC       p. 226
+SLOTTIME      p. 226
+START         p. 226
+STATUS        p. 227  Reports connection state on the TNC.
+STOP          p. 227
+STREAMCA      p. 228
+STREAMEV      p. 228
+STREAMSW      p. 228  Sets the character that introduces a stream selector in terminal mode.
+SUPLIST       p. 229
+SWP           p. 230
+TELEMTRY      p. 230
+TRACE         p. 231
+TRANS         p. 231
+TRFLOW        p. 231
+TRIES         p. 232
+TXDELAY       p. 232  Sets the interval between keying the transmitter and sending packet data.
+TXFLOW        p. 232
+UIDIGI        p. 233
+UIDUPE        p. 233
+UIDWAIT       p. 233
+UIFLOOD       p. 233
+UIGATE        p. 234
+UITRACE       p. 234
+UNPROTO       p. 234  Sets the destination and optional path for unconnected packet transmissions.
+USERS         p. 235
+VERSION       p. 235  Reports firmware version information.
+XFLOW         p. 235  Controls software flow control on the serial interface.
+XKCHKSUM      p. 236
+XKPOLLED      p. 236
+XMITLVL       p. 236
+XMITOK        p. 237
+XOFF          p. 237
+XON           p. 237
+
+KAM XL
+https://kantronics.com/wp-content/uploads/2018/10/KAM-XL-Manual-RevE.pdf
+
+8BITCONV      p.  99
+ABAUD         p.  99  Computer-side serial speed. A change may require a reset and a matching speed in Packet Desk.
+AMTOR         p. 100
+ANALOG        p. 100
+ARQBBS        p. 101
+ARQID         p. 101
+ARQTIME       p. 101
+ASCBAUD       p. 101
+ASCII         p. 102
+AUTOCR        p. 102
+AUTOLF        p. 102
+AUTOSTRT      p. 103
+AX25L2V2      p. 103
+AXDELAY       p. 104
+AXHANG        p. 104
+BARGRAPH      p. 104
+BEACON        p. 105  Controls automatic packet beacon timing on firmware with this command.
+BITS          p. 105
+BKONDEL       p. 105
+BLT           p. 106
+BREAK         p. 106
+BTEXT         p. 107  Sets the text that goes into beacon packets.
+BUDLIST       p. 107
+CANLINE       p. 108
+CANPAC        p. 108
+CD            p. 108
+CHECK         p. 109
+CMDTIME       p. 109
+CMSG          p. 109
+CODE          p. 110
+COMMAND       p. 110  Sets the character that returns the TNC to command mode. Factory default is Ctrl+C.
+CONLIST       p. 111
+CONMODE       p. 111
+CONNECT       p. 112  Requests a packet link to a callsign. Add VIA and comma-separated callsigns for a digipeater path.
+CONOK         p. 112
+CONPERM       p. 113
+CONVERS       p. 113  Treats keyboard input as packet text. Ctrl+C returns to the command prompt with factory settings.
+CPACTIME      p. 113
+CR            p. 114
+CRADD         p. 114
+CRSUP         p. 114
+CSTAMP        p. 114
+CTEXT         p. 115
+CTRL          p. 115
+CW            p. 115
+CWBAND        p. 116
+CWFARNSW      p. 116
+CWID          p. 116
+CWIDTEXT      p. 116
+CWOUTPUT      p. 117
+CWSPEED       p. 117
+CWTONE        p. 117
+CWWEIGHT      p. 117
+DAMA          p. 118
+DAMACHCK      p. 118
+DAYSTR        p. 119
+DAYTIME       p. 120
+DAYTWEAK      p. 120
+DBLDISC       p. 120
+DELETE        p. 121
+DIDDLE        p. 121
+DIGIPEAT      p. 121
+DISCONNE      p. 122  Ends the AX.25 link on the current TNC stream.
+DISPLAY       p. 122  Shows the TNC's current settings. Some firmware accepts a group selector.
+DWAIT         p. 123
+ECHO          p. 123
+ESCAPE        p. 123
+FEC           p. 123
+FILTER        p. 124
+FLOW          p. 124
+FRACK         p. 124  Sets the wait before an unacknowledged frame is retried.
+FREEQUAL      p. 125
+FSKINV        p. 125
+FULLDUP       p. 125
+GMON          p. 125
+GPSHEAD       p. 126
+GPSINIT       p. 126
+GPSPORT       p. 127
+GPSTIME       p. 127
+GTDOWN        p. 127
+GTERRS        p. 128
+GTFUZZY       p. 128
+GTOR          p. 128
+GTTRIES       p. 128
+GTUP          p. 129
+HBAUD         p. 129  Sets the over-the-air modem rate. The computer-side speed is controlled by ABAUD.
+HEADERLN      p. 129
+HELP          p. 130  Lists the available firmware commands. HELP followed by a name gives a short explanation.
+HID           p. 130
+HTEXT         p. 130
+ID            p. 131
+INTFACE       p. 131  Selects the computer interface mode. Packet Desk uses TERMINAL mode.
+INVERT        p. 132
+K             p. 132
+KNTIMER       p. 132
+KNXCON        p. 132
+LAMTOR        p. 132
+LCOK          p. 133
+LFADD         p. 133
+LFSUP         p. 133
+LGETCHAR      p. 133
+LLIST         p. 134
+LOWTONES      p. 134
+LT            p. 134
+LTP           p. 135
+LTRACK        p. 135
+MALL          p. 135
+MARK          p. 136
+MAXFRAME      p. 136  Limits the number of outstanding packets before acknowledgment.
+MAXUSERS      p. 136
+MBEACON       p. 137
+MCOM          p. 137
+MCON          p. 138  Controls monitoring while connected.
+MHEADER       p. 138
+MHEARD        p. 138  Displays the stations heard by the TNC.
+MISSCHAR      p. 139
+MONITOR       p. 139  Turns packet monitoring on or off. Other monitor settings control which packets appear.
+MORSE         p. 140
+MRESP         p. 140
+MRPT          p. 141
+MSTAMP        p. 141
+MXMIT         p. 142
+MYALIAS       p. 142
+MYAUTOST      p. 142
+MYCALL        p. 143  Displays or sets your station callsign and optional SSID.
+MYDGPS        p. 143
+MYDROP        p. 143
+MYGATE        p. 144
+MYGROUP       p. 144
+MYGTCALL      p. 144
+MYNODE        p. 144
+MYPBBS        p. 145
+MYPTCALL      p. 145
+MYREMOTE      p. 145
+MYSELCAL      p. 146
+NAVCLR        p. 146
+NAVERR        p. 146
+NAVLOG        p. 147
+NAVMSG        p. 147
+NAVSTA        p. 147
+NAVTEX        p. 148
+NDHEARD       p. 148
+NDWILD        p. 148
+NETALIAS      p. 149
+NETBUFFS      p. 149
+NETCALL       p. 149
+NETCIRCS      p. 149
+NETDESTS      p. 150
+NETLINKS      p. 150
+NETROUTE      p. 150
+NETUSERS      p. 151
+NEWMODE       p. 151
+NOMODE        p. 151
+NTEXT         p. 151
+NUMNODES      p. 152
+PACLEN        p. 152  Controls the size of the packet data portion.
+PACTIME       p. 153
+PACTOR        p. 153
+PASS          p. 154
+PASSALL       p. 154
+PBBS          p. 155
+PBFORWRD      p. 155
+PBHEADER      p. 156
+PBHOLD        p. 156
+PBKILLFW      p. 156
+PBLIST        p. 157
+PBLO          p. 157
+PBPERSON      p. 158
+PBREVERS      p. 158
+PERSIST       p. 159
+PHEARD        p. 159
+PID           p. 160
+PMODE         p. 160
+PORT          p. 161
+PROSIGN       p. 161
+PTDOWN        p. 161
+PTERRS        p. 161
+PTEXT         p. 162
+PTFECSPD      p. 162
+PTHUFF        p. 162
+PTLISTEN      p. 162
+PTRPT         p. 163
+PTSI          p. 163
+PTSUM         p. 163
+PTTRIES       p. 163
+PTUP          p. 164
+RANGE         p. 164
+RBAUD         p. 164
+REDISPLA      p. 164
+RELINK        p. 165
+REPHASE       p. 165
+RESET         p. 165  Restarts the TNC. This can drop active connections and apply pending interface changes.
+RESTORE       p. 166  Restores factory settings. Consult the manual before using it.
+RETRY         p. 166  Sets the retry limit for packet connections.
+RING          p. 166
+RNRTIME       p. 166
+RPRINT        p. 167
+RTEXT         p. 167
+RTTY          p. 167
+SCREENL       p. 167
+SENDPAC       p. 168
+SHIFT         p. 168
+SLOTTIME      p. 168
+SPACE         p. 168
+SQUELCH       p. 168
+START         p. 169
+STATUS        p. 169  Reports connection state on the TNC.
+STOP          p. 169
+STREAMCA      p. 170
+STREAMEV      p. 170
+STREAMSW      p. 170  Sets the character that introduces a stream selector in terminal mode.
+SUPLIST       p. 171
+TELEMTRY      p. 171
+TOR           p. 172
+TRACE         p. 172
+TRANS         p. 172
+TRFLOW        p. 173
+TRIES         p. 173
+TXDELAY       p. 173  Sets the interval between keying the transmitter and sending packet data.
+TXDFEC        p. 174
+TXDTOR        p. 174
+TXFLOW        p. 174
+UIDIGI        p. 175
+UIDUPE        p. 176
+UIDWAIT       p. 175
+UIFLOOD       p. 176
+UIGATE        p. 176
+UITRACE       p. 177
+UNPROTO       p. 177  Sets the destination and optional path for unconnected packet transmissions.
+USERS         p. 177
+USOS          p. 178
+VERSION       p. 178  Reports firmware version information.
+WEFAX         p. 178
+WTEXT         p. 178
+XFLOW         p. 179  Controls software flow control on the serial interface.
+XKCHKSUM      p. 179
+XKPOLLED      p. 179
+XMITLVL       p. 180
+XOFF          p. 180
+XON           p. 180

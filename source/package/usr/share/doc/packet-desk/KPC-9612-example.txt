@@ -1,0 +1,12 @@
+# Packet Desk example for a KPC-9612 at cmd:
+# These two commands query the TNC. Lines beginning with # are skipped.
+VERSION
+MYCALL
+
+# Example settings. Edit and uncomment individual lines as needed.
+# LT 1 Example location text for buffer 1
+# LT 2 "data"
+# BLT 1 EVERY 00:08:00/EVERY 00:00:00
+# TXDELAY 30/30
+# XOFF $13
+# XON $11

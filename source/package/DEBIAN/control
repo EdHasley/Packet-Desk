@@ -1,0 +1,10 @@
+Package: packet-desk
+Version: 0.3.0
+Section: hamradio
+Priority: optional
+Architecture: all
+Maintainer: Packet Desk Project <packet-desk@localhost>
+Depends: python3 (>= 3.9), python3-serial, python3-tk
+Description: Linux packet-radio terminal for Kantronics TNCs
+ Serial terminal for TNCs running in TERMINAL mode. Provides command
+ shortcuts, a packet monitor transcript, and session logging.
